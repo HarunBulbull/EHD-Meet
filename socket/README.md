@@ -1,3 +1,4 @@
+
 # EHD
 
 EHD is an online meeting project which I made it for the Ege Universty Hospital in Turkey. It is using React in front-end, node.js and socket.io in backend.
@@ -26,6 +27,32 @@ After clone the project follow codes:
   npm install
 ```
 ###
+#### SQL:
+```bash
+CREATE SCHEMA `meeting` ;
+CREATE TABLE `meeting`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `mail` VARCHAR(60) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `isAdmin` TINYINT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `mail_UNIQUE` (`mail` ASC) VISIBLE);
+CREATE TABLE `meeting`.`notifications` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `sendername` VARCHAR(45) NOT NULL,
+  `receiverid` INT NOT NULL,
+  `roomid` VARCHAR(45) NOT NULL,
+  `date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`));
+CREATE TABLE `meeting`.`news` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `header` VARCHAR(45) NOT NULL,
+  `content` VARCHAR(3000) NOT NULL,
+  `img` VARCHAR(70) NOT NULL,
+  `date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`));
+```
 #### Run
 You are ready to press the big red button! :)
 ###### *Run node.js server:*
