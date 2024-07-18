@@ -1,0 +1,112 @@
+.deleteForm{
+  position: fixed;
+  z-index: 1000;
+  width: 50%;
+  max-width: 630px;
+  padding-bottom: 5rem;
+  background-color: #f3f3f3;
+  top: 50%;
+  left: calc(50% + 125px);
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.mainIcon{
+  color: rgba(255,0,0,.5);
+  font-size: 50px;
+  margin-top: 1rem;
+  border: 2px solid rgba(255,0,0,.5);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  border-radius: 100px;
+}
+
+.mainHeader{
+  margin:1rem;
+  text-align: center;
+}
+
+.deleteInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.deleteButtons{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 600px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.deleteButton{
+  background-color: red;
+  margin: .5rem;
+  outline: none;
+  border: none;
+  height: 50px;
+  color:white;
+  border-radius: 10px;
+}
+
+.deleteButton:nth-child(1){
+  background-color: #a7a7a7;
+}
+
+.panelExclamation{
+  position: absolute;
+  right:1rem;
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  color:red;
+  border: 1px solid red;
+  cursor: pointer
+}
+
+.exclamationText{
+  position: absolute;
+  right: 0rem;
+  transform: translateX(100%);
+  background-color: white;
+  padding: .2rem .5rem;
+  border-radius: 10px;
+  transition: all ease .3s;
+  opacity: 0;
+}
+
+.panelExclamation:hover + .exclamationText{
+  transform: translateX(105%);
+  opacity: 1;
+}
+
+.textareaholder{
+  width: 90%;
+  height: 500px;
+  background: none;
+  resize: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+.panelFile{
+  display: none;
+}
+
+.panelFileLabel{
+  border: 1px solid black;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+.panelFileLabel:hover{
+  background-color: black;
+  color: white;
+}

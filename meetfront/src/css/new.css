@@ -1,0 +1,143 @@
+.new{
+  height: 400px;
+  width: 900px;
+  display: flex;
+  overflow: hidden;
+}
+
+.newimage{
+  width: 900px;
+  border-radius: 1rem;
+}
+
+.contentarea{
+  position: absolute;
+  width: 900px;
+  height: 400px;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,.2) 100%);
+  border-radius: 1rem;
+  backdrop-filter: blur(0px);
+  transition: all ease .3s;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .new, .newimage, .contentarea{
+    width: 600px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 750px) {
+  .new, .newimage, .contentarea{
+    width: 400px;
+    height: 250px;
+  }
+}
+
+.contentarea h1{
+  position: relative;
+  color: white;
+  opacity: .3;
+  top:85%;
+  left: 2rem;
+  transition: all ease .3s;
+}
+
+.contentarea button{
+  position: absolute;
+  color: white;
+  bottom: 1rem;
+  right: 1rem;
+  transition: all ease .3s;
+  border: none;
+  outline: none;
+  background-color: #a7a7a7;
+  padding: .5rem calc(1.5rem + 10px) .5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:.5rem;
+  border-radius: 10px;
+}
+
+.contentarea button::before{
+  content: '';
+  display: block;
+  height: 10px;
+  width: 10px;
+  rotate: -45deg;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  position: relative;
+  left:-.5rem;
+  opacity: 0;
+  transition: all ease .3s;
+}
+
+
+.contentarea:hover{
+  backdrop-filter: blur(3px);
+}
+
+.contentarea:hover h1{
+  opacity: 1;
+}
+
+.contentarea:hover button::before{
+  left:0;
+  opacity: 1;
+}
+
+.broadcastImg{
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1000px;
+  min-width: 500px;
+  border-radius: 10px;
+}
+
+.broadcastHeader{
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 3rem;
+
+}
+
+.broadcastDate{
+  text-align: center;
+  font-size: 13px;
+  opacity: .5;
+}
+
+.broadcastbg{
+  width: 100%;
+  background-color: #f0f0f0;
+  box-shadow: 0px 0px 3px black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}
+
+.goBack{
+  position: fixed;
+  background-color: rgba(26, 26, 26, .5);
+  backdrop-filter: blur(2px);
+  color: white;
+  padding: .5rem 1rem;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 10px;
+  scale: 1;
+  cursor: pointer;
+  transition: all ease .3s;
+  user-select: none;
+}
+
+.goBack:hover{
+  scale:  1.05;
+}

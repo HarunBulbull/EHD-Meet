@@ -1,0 +1,39 @@
+.NoPagemain{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.NoPagemain h1{
+  color: #242368;
+  font-size: 28px;
+}
+
+.NoPagemain a{
+  margin-top: 1rem;
+  text-decoration: none;
+  background-color: #242368;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  scale: 1;
+  transition: all ease .3s;
+}
+
+.NoPagemain a:hover{
+  scale: 1.05;
+}
+
+.NoPagemain i{
+  width: 350px;
+  text-align: center;
+  margin: .5rem;
+  opacity: .7;
+}

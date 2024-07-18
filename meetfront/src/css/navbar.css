@@ -1,0 +1,133 @@
+.navbar_nav{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(36, 35, 104, .4);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  align-items: center;
+  z-index: 999;
+}
+
+.navbar_nav img{
+  margin-left: 1rem;
+  height: 45px;
+}
+
+.navbar_nav ul{
+  list-style: none;
+  display: flex;
+  gap:1rem;
+  height: 50px;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.navbar_nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+}
+
+.navbar_nav ul li a::after{
+  content: '';
+  width: 0;
+  display: block;
+  position: relative;
+  height: 1px;
+  background-color: #fff;
+  left:50%;
+  transform: translate(-50%);
+  transition: all ease .3s;
+}
+
+.navbar_nav ul li a:hover::after{
+  width: 105%;
+}
+
+.navbar_notifications{
+  position: fixed;
+  z-index: 1001;
+  background-color: rgba(0,0,0, .5);
+  backdrop-filter: blur(10px);
+  height: 50vh;
+  top: 70px;
+  right: 1rem;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px #a7a7a7, ;
+  user-select: none;
+  display: none;
+  overflow-y: scroll;
+}
+
+.navbar_notifications::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ccc;
+  border-radius: 0 10px 10px 0;
+}
+.navbar_notifications::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 0 10px 10px 0;
+}
+
+.menu{
+  display: none;
+  flex-direction: column;
+  gap: .2rem;
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+}
+
+.menu span{
+  display: block;
+  width: 40px;
+  height: 5px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.menu span:nth-child(2){
+  width: 25px;
+}
+
+.navbar_nav_hide{
+  position: fixed;
+  z-index: 999;
+  top: 4rem;
+  left: 1rem;
+  background-color: rgba(36, 35, 104, .4);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.navbar_nav_hide ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navbar_nav_hide ul li a{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+
+@media (max-width: 850px) {
+  .menu{
+    display: flex;
+  }
+  .navbar_nav{
+    justify-content: end;
+  }
+  .navbar_nav ul{
+    display: none;
+  }
+}
