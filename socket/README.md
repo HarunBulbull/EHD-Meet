@@ -52,6 +52,7 @@ CREATE TABLE `meeting`.`news` (
   `img` VARCHAR(70) NOT NULL,
   `date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`));
+INSERT INTO `meeting`.`users` (name, mail, password, isAdmin) values ("Test Account", "test@test.com", "12345678", true);
 ```
 #### Run
 You are ready to press the big red button! :)
